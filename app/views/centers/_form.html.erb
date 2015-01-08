@@ -1,0 +1,25 @@
+<%= form_for(@center) do |f| %>
+  <% if @center.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@center.errors.count, "error") %> prohibited this center from being saved:</h2>
+
+      <ul>
+      <% @center.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :center_id %><br>
+    <%= f.number_field :center_id %>
+  </div>
+  <div class="field">
+    <%= f.label :location %><br>
+    <%= f.text_field :location %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

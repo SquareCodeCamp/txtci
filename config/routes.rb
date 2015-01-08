@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  resources :sponsors
+
+  resources :messages
+
+  resources :centers
+
+  resources :children
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
