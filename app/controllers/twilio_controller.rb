@@ -12,7 +12,12 @@ class TwilioController < ApplicationController
             r.Say 'Hey there', :voice => 'alice'
                 r.Play 'http://linode.rabasa.com/cantina.mp3'
         end
-
     render_twiml response
     end
+
+    def index
+        message_body = params["Body"]
+        from_number = params["From"]
+    end
+
 end
