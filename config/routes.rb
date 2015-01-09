@@ -10,5 +10,5 @@ Rails.application.routes.draw do
 
   post 'twilio/voice' => 'twilio#voice'
 
-  root 'application#index'
+  root "application#index"
 end
