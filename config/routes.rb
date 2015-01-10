@@ -18,5 +18,6 @@ Rails.application.routes.draw do
 
   #TODO
   get 'find/sponsors/:sponsor_id', to: 'api#getMessageFromSponsor', as: 'sponsorMessage'
+  get 'find/centers/:center_id', to: 'api#getMessageFromCenter', as: 'centerMessage'
   
 end
