@@ -28,6 +28,6 @@ module TwilioHelper
                           "child"=>child,
                           "center"=>center
         }
-        @message = Message.new(message_params)
+        # @message = Message.new(message_params)
     end
 end
