@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
 
   post 'twilio/voice' => 'twilio#voice'
+  post 'twilio/sms' => 'twilio#message'
+
   root "application#index"
 
   # post 'twilio/status' => 'twilio#status'
