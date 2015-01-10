@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<h1>Txtci</h1>
+	<h3>gettin dem messages </h3>
+	<p>
+		<%=@sponsorMessage.each do |sponsorMessage| %>
+			<%= sponsorMessage.text %>
+		<% end %>
+	</p>
+
+</body>
+</html>

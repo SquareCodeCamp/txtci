@@ -15,4 +15,8 @@ Rails.application.routes.draw do
 
   # post 'twilio/status' => 'twilio#status'
   post 'notifications/notify' => 'notifications#notify'
+
+  #TODO
+  get 'find/sponsors/:sponsor_id', to: 'api#getMessageFromSponsor', as: 'sponsorMessage'
+  
 end
