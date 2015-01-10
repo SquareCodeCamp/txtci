@@ -1,14 +1,23 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Center:</strong>
-  <%= @center.center_id %>
-</p>
+<body style="
+    text-align: center;
+    background-color: white;
+    background-image:url(http://www.youngfam.co/wp-content/uploads/2012/10/children-globe-top.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+    ">
+	<p>
+	  <strong>Center:</strong>
+	  <%= @center.center_id %>
+	</p>
 
-<p>
-  <strong>Location:</strong>
-  <%= @center.location %>
-</p>
+	<p>
+	  <strong>Location:</strong>
+	  <%= @center.location %>
+	</p>
+
+</body>
 
 <%= link_to 'Edit', edit_center_path(@center) %> |
 <%= link_to 'Back', centers_path %>
