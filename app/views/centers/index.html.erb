@@ -1,28 +1,46 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Centers</h1>
+<body style="
+    text-align: center;
+    background-color: white;
+    background-image:url(http://www.youngfam.co/wp-content/uploads/2012/10/children-globe-top.jpg);
+    background-repeat: no-repeat;
+    background-position: absolute;
+    ">
+  <h1 style="
+      display: block; 
+      font-size: 4em; 
+      text-align: center; 
+      font-family: helvetica;
+      text-decoration: underline;
+      color: #00BFFF;">Listing Centers</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Center</th>
-      <th>Location</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @centers.each do |center| %>
+  <table style="
+      margin: 0 auto;
+      font-size: 2em;
+      font-family: helvetica;">
+    <thead>
       <tr>
-        <td><%= center.center_id %></td>
-        <td><%= center.location %></td>
-        <td><%= link_to 'Show', center %></td>
-        <td><%= link_to 'Edit', edit_center_path(center) %></td>
-        <td><%= link_to 'Destroy', center, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Center</th>
+        <th>Location</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+
+    <tbody>
+      <% @centers.each do |center| %>
+        <tr>
+          <td><%= center.center_id %></td>
+          <td><%= center.location %></td>
+          <td><%= link_to 'Show', center %></td>
+          <td><%= link_to 'Edit', edit_center_path(center) %></td>
+          <td><%= link_to 'Destroy', center, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+</body>
 
 <br>
 

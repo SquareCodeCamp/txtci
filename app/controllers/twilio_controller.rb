@@ -2,6 +2,8 @@ require 'twilio-ruby'
 
 class TwilioController < ApplicationController
   include Webhookable
+  include TwilioHelper
+
 
   after_filter :set_header
 
@@ -19,19 +21,20 @@ class TwilioController < ApplicationController
     def message
         twilio_phone_number = "4844832512"
 
-
         message_body = params["Body"]
         from_number = params["From"]
         
         @twilio_client = Twilio::REST::Client.new Rails.application.secrets.twilio_account_sid, Rails.application.secrets.twilio_token
  
-        @twilio_client.account.sms.messages.create(
-          :from => "+1#{twilio_phone_number}",
-          :to => from_number,
-          :body => message_body
-        )
+        # @twilio_client.account.sms.messages.create(
+        #   :from => "+1#{twilio_phone_number}",
+        #   :to => from_number,
+        #   :body => message_body
+        # )
 
+        parseText(message_body)
         render text: "success"
     end
+
 
 end
